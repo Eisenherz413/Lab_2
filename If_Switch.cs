@@ -47,7 +47,7 @@ namespace If_Switch
             string res42_4 = (a42 > c42) & (c42 > a42) ? "Yeap" : "Nope";
 
             Console.WriteLine($"4.42 a) {res42}\n4.42 b) {res42_4}");
-        }      
+        }
         static void Task4_110()
         {
             Console.WriteLine("Введите масть: ");
@@ -201,9 +201,78 @@ namespace If_Switch
             string res = (odinitsi == 4 | odinitsi == 7 | desiatok == 4 | desiatok == 7 | nevaghno == 4 | nevaghno == 7) ? "Yes" : "No";
             Console.WriteLine(res);
         }
+        static void TaskMetanit1()
+        {
+            //Напишите консольную программу, в которую пользователь вводит с клавиатуры два числа.
+            //А программа сранивает два введенных числа и выводит на консоль результат
+            //сравнения(два числа равны, первое число больше второго или первое число меньше второго)
+            Console.Write("Enter first num: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second num: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 > num2)
+            {
+                Console.WriteLine("The first one is greater");
+            }
+            else if (num1 < num2)
+            {
+                Console.WriteLine("The secind one is greater");
+            }
+            else
+            {
+                Console.WriteLine("Both are equal");
+            }
+        }
+        static void TaskMetanit2()
+        {
+            //Напишите консольную программу, в которую пользователь вводит с клавиатуры число.
+            //Если число одновременно больше 5 и меньше 10, то программа выводит 
+            //"Число больше 5 и меньше 10".Иначе программа выводит сообщение "Неизвестное число"
+            Console.WriteLine("Enter number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (num > 5 && num < 10)
+            {
+                Console.WriteLine("number is greater than 5 and less then 10");
+            }
+            else
+            {
+                Console.WriteLine("Unknown number");
+            }
+            Console.ReadKey();
+        }
+        static void TaskMetanit3()
+        {
+            //Напишите консольную программу, в которую пользователь вводит с клавиатуры число.
+            //Если число равно 5 либо равно 10, то программа выводит 
+            //"Число равно 5 либо равно 10".Иначе программа выводит сообщение "Неизвестное число"
+            Console.WriteLine("Enter number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (num == 5 || num == 10)
+            {
+                Console.WriteLine("number is equal 5 or equal 10");
+            }
+            else
+            {
+                Console.WriteLine("Unknown number");
+            }
+            Console.ReadKey();
+        }
+        static void TaskMetanit4()
+        {
+            //В банке в зависимости от суммы вклада начисляемый процент по вкладу может отличаться.
+            //Напишите консольную программу, в которую пользователь вводит сумму вклада. 
+            //Если сумма вклада меньше 100, то начисляется 5 %.Если сумма вклада от 100 до 200, 
+            //то начисляется 7 %.Если сумма вклада больше 200, то начисляется 10 %.В конце программа
+            //должна выводить сумму вклада с начисленными процентами.
+            //Для получения вводимого с клавиатуры числа используйте выражение Convert.ToDouble(Console.ReadLine())
+        }
+
         static void Main(string[] args)
         {
-            ChoiceSort();
+            SelectionSort();
         }           
      
     }

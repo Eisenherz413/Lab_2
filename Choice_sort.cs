@@ -8,7 +8,14 @@ namespace If_Switch
     {
         static void ChoiceSort()
         {
-            int[] mass = { 2, 7, 34, 1, 0, 7, 8, 1, -8, 12};
+            Console.Write("Enter amount of  elements: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[] mass = new int[m];
+            for (int index = 0; index < m; index++)
+            {
+                Console.Write($"Enter element #{index + 1}: ");
+                mass[index] = Convert.ToInt32(Console.ReadLine());
+            }
             int j = 0;
             int i = 0;
             int minIndex = 0;
@@ -17,13 +24,12 @@ namespace If_Switch
                 j = i;
                 int min = mass[i];
 
-                while (j < (mass.Length-1)) ///loop for min search
+                while (j < (mass.Length)) ///loop for min search
                 {
                     if (mass[j] <= min)
                     {
                         min = mass[j];
                         minIndex = j;
-                       Console.WriteLine($"minimum value: {min}");
                     }
                     j++;
                 }
