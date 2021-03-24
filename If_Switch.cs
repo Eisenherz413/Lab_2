@@ -272,7 +272,7 @@ namespace If_Switch
 
         static void Main(string[] args)
         {
-            SelectionSort();
+            Task12_34();
         }           
      
     }

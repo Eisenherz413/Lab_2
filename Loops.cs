@@ -134,8 +134,6 @@ namespace If_Switch
             ///и минимальной цифр четным числом.
             Console.WriteLine("Enter number: ");
             int num = Convert.ToInt32(Console.ReadLine());
-            int min = -1;
-            int max = 10;
             int remainder;
             int divisor;
             do
