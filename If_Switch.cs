@@ -272,7 +272,9 @@ namespace If_Switch
 
         static void Main(string[] args)
         {
-            Task12_34();
+            Point A = new Point(-2.9, -4.7);
+            Point B = new Point(2, 8);
+            Cat c = new Cat("Alex", Gender.Female);
         }           
      
     }
