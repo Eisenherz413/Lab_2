@@ -33,12 +33,17 @@ namespace If_Switch
             get { return edition; }
             set { edition = value; }
         }
-        private Article listOfArticles;
+        private List<Article> listOfArticles;
 
-        public Article ListOfArticles
+        public List<Article> ListOfArticles
         {
             get { return listOfArticles; }
             set { listOfArticles = value; }
+        }
+
+        public void AddArticles(params Article[] articlesList)
+        {
+            listOfArticles.AddRange(articlesList);
         }
         public Magazine(string magazineTitle, Person.Frequency releaseFrequency, System.DateTime releaseDate, int edition)
         {
@@ -54,11 +59,16 @@ namespace If_Switch
             ReleaseDate = System.DateTime.Now;
             Edition = 0;
         }
-        private double ratingCalculation;
-
+        
         public double RatingCalculation
         {
-            get { return 5678; }
+            get {
+                double sumRating = 0;
+                foreach (Article article in listOfArticles)
+                {
+                    sumRating += article.ArticleRating;
+                }
+                return sumRating/listOfArticles.Count; }
         }
 
 
