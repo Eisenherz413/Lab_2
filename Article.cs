@@ -18,9 +18,9 @@ namespace If_Switch
         public Article() { }
         public override string ToString()
         {
-            return $"About article author:{AuthorData}," +
-                $" Title of an article: {ArticleName}," +
-                $" Article rating: {ArticleRating}";
+            return $"About article author:{AuthorData},\n" +
+                $"Title of an article: {ArticleName},\n" +
+                $"Article rating: {ArticleRating}";
         }
     }
 }

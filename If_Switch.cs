@@ -273,9 +273,31 @@ namespace If_Switch
 
         static void Main(string[] args)
         {
-            Point A = new Point(-2.9, -4.7);
-            Point B = new Point(2, 8);
-            Cat c = new Cat("Alex", Gender.Female);
+            //Point A = new Point(-2.9, -4.7);
+            //Point B = new Point(2, 8);
+            //Cat c = new Cat("Alex", Gender.Female);
+
+            Magazine mag = new Magazine("Some Interesting Title", Person.Frequency.Weekly, DateTime.Now, 3);
+
+            Console.WriteLine(mag.ToShortString());
+            Console.WriteLine(Person.Frequency.Monthly);
+            Console.WriteLine(Person.Frequency.Weekly);
+            Console.WriteLine(Person.Frequency.Yearly);
+
+            Console.WriteLine(mag.ToString());
+
+            Person author1 = new Person("Roberto", "Huawi", new DateTime(1988, 9, 2));
+            Person author2 = new Person();
+            Person author3 = new Person("Osho", "No", new DateTime(1776, 12, 29));
+            Article art1 = new Article();
+            Article art2 = new Article();
+            Article art3 = new Article();
+            Article art4 = new Article();
+
+            // не розумію в чому проблема з Person AuthorData
+            // Article art2 = new Article(Person author4, "World Business Game", 9.0)
+
+            mag.AddArticles(art1, art2, art3, art4);
         }           
      
     }

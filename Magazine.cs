@@ -52,6 +52,23 @@ namespace If_Switch
             ReleaseDate = releaseDate;
             Edition = edition;
         }
+        public override string ToString()
+        {
+            return $"Title of a Magazine: {MagazineTitle},\n" +
+                $"Frequaency of releases: {ReleaseFrequency},\n" +
+                $"Date of release: {ReleaseDate},\n" +
+                $"Edition: {Edition},\n" +
+                $"Overall list of articles: {listOfArticles}";
+        }
+
+        public virtual string ToShortString()
+        {
+            return $"Title of a Magazine: {MagazineTitle},\n" + 
+                $"Frequaency of releases: {ReleaseFrequency},\n" +
+                $"Date of release: {ReleaseDate},\n" +
+                $"Edition: {Edition},\n" +
+                $"Average article rating: {RatingCalculation}";
+        }
         public Magazine() 
         {
             MagazineTitle = "Some default title";
@@ -64,13 +81,22 @@ namespace If_Switch
         {
             get {
                 double sumRating = 0;
-                foreach (Article article in listOfArticles)
+                if (listOfArticles != null)
                 {
-                    sumRating += article.ArticleRating;
+                    foreach (Article article in listOfArticles)
+                    {
+                        sumRating += article.ArticleRating;
+                    }
+                    return sumRating / listOfArticles.Count;
                 }
-                return sumRating/listOfArticles.Count; }
+                else
+                {
+                    return Convert.ToDouble(0);
+                }
+            }
+                
         }
 
-
+       
     }
 }
