@@ -34,6 +34,7 @@ namespace If_Switch
                 return (Name == p.Name) && (Surname == p.Surname) && (BirthdayDate == p.BirthdayDate);
             }
         }
+        
         private int ChangeYear;
         public int YearOfBirth
         {
