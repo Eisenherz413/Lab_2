@@ -21,6 +21,19 @@ namespace If_Switch
             set { surname = value; }
         }
         protected System.DateTime BirthdayDate { get; set; }
+        public override bool Equals(Object obj)
+        {
+            //Check for null and compare run-time types.
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                Person p = (Person)obj;
+                return (Name == p.Name) && (Surname == p.Surname) && (BirthdayDate == p.BirthdayDate);
+            }
+        }
         private int ChangeYear;
         public int YearOfBirth
         {
